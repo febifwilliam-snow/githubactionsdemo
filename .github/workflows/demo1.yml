@@ -1,10 +1,14 @@
-name: Hello World Workflow
-'on':
-  - push
+name: Demo workflow
+
+on:
+  push:
+    branches:
+      - main
+
 jobs:
-  say-hello-job:
+  demo-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Say Hello
-        run: echo "Hello world!"
--
+      - name: Print message
+        run: echo "GitHub Actions working!"
+
